@@ -1,0 +1,12 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  username: root
+  password: 
+  database: kyletate_ca_dev
+  socket: /tmp/mysql.sock

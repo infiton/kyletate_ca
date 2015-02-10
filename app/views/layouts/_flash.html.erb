@@ -1,0 +1,8 @@
+<% flash.keys.each do |key| %>
+  <% sub_key = :danger if key.to_s == "alert" %>
+  <% sub_key = :success if key.to_s == "notice" %>
+  <%= content_tag(:div, class: ["alert", "alert-#{sub_key ? sub_key : key}", "alert-dismissable"]) do %>
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[key] %>
+  <% end %>
+<% end %>

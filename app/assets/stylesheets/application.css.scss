@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require devise_bootstrap_views
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's         height */
+}
+
+.footer, .push {
+    height: 80px; /* '.push' must be the same height as 'footer' */
+}
+
+hr {
+  border-color: #ccc;
+  border-width: 1px 0;
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.blog-header{
+  .row {
+    display: table;
+  }
+
+  [class*="col-"] {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+
+  h1.blog-title {
+    text-align: center;
+    font-family: calluna-sans, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+    color: rgba(46, 48, 58, 0.96);
+    font-weight: 700;
+    font-size: 5.5rem;
+  }
+  
+  h3.blog-subtitle {
+    text-align: center;
+    color: rgba(189, 191, 201, 0.96);
+    font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+}
+
+.post-title {
+  text-align: center;
+  font-family: calluna-sans, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+  color: rgba(46, 48, 58, 0.96);
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+.post-byline {
+  text-align: center;
+  color: rgba(189, 191, 201, 0.96);
+  font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.footer{
+  background: rgba(228, 229, 233, 0.96);
+
+  .footer-links {
+    float: right;
+  }
+
+  .footer-message{
+    text-align: center;
+    font-family: "calluna-sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  }
+}
